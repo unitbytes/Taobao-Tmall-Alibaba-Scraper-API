@@ -1,0 +1,253 @@
+{
+  "name": "Taobao & Tmall 淘宝 Scraper — Details, Reviews, Prices & SKU — Automated Extraction to CSV & Sheets (UnitBytes)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ Taobao & Tmall 淘宝 Scraper — Details, Reviews, Prices & SKU — Automated n8n Pipeline\n**Powered by [UnitBytes on Apify](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=n8n_io)** ($0.0015 / item)\n\n### ⚙️ How It Works\nThis workflow runs on a schedule, calls the **[taobao-tmall-scraper Apify Actor](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=n8n_io)** via its synchronous REST endpoint, normalizes the extracted fields (`itemId, title, platform, url, taobaoUrl`), and exports a clean CSV file.\n\n### 🚀 30-Second Setup Instructions\n1. **Get your free Apify API Token**: Open [taobao-tmall-scraper on Apify Store](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=n8n_io) and copy your API token from **Settings → Integrations**.\n2. **Paste your token & search parameters**: Double-click the **\"1. Set Apify Token & Input\"** node and replace `YOUR_APIFY_API_TOKEN` with your token.\n3. **Click \"Test Workflow\"**: The HTTP Request node calls the synchronous UnitBytes Apify endpoint, normalizes the extracted records, and exports a clean CSV file ready for Google Sheets, Airtable, Slack, or OpenAI.\n\n📖 **Documentation & Schema Reference**: [https://unitbytes.com/actors/taobao-tmall-scraper/](https://unitbytes.com/actors/taobao-tmall-scraper/)",
+        "height": 380,
+        "width": 520,
+        "color": 4
+      },
+      "id": "b8673ad0-1118-5f74-acab-bb3967729bf7",
+      "name": "Sticky Note — Setup Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### 📊 Connect Your Destination\nThe **\"3. Normalize Output Fields\"** node outputs flat records (`itemId, title, platform, url, taobaoUrl`).\n\n- **Google Sheets / Airtable**: Connect a Google Sheets (`Append or Update Row`) node after Step 3.\n- **Slack / Telegram / Email Alerts**: Connect a Filter node + Slack node to alert your team on new deals or reviews.\n- **AI Agent / OpenAI**: Connect an OpenAI / LLM Chain node to summarize or classify extracted items.",
+        "height": 220,
+        "width": 420,
+        "color": 5
+      },
+      "id": "a2f0de66-868c-5d9a-9021-61dc85df9e09",
+      "name": "Sticky Note — Destinations",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "50b0090c-ea3e-5974-9496-fddea4485f13",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "16aeb788-4e42-5950-aec0-3de27cfbb9c6",
+              "name": "apifyToken",
+              "value": "YOUR_APIFY_API_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "55b04891-6bfc-5407-bf84-3783226851c5",
+              "name": "actorInput",
+              "value": "{\"maxItems\": 20}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5ccd4374-8047-520c-bb1a-c07651ec7387",
+      "name": "1. Set Apify Token & Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/unitbytes~taobao-tmall-scraper/run-sync-get-dataset-items?token={{ $json.apifyToken }}&format=json&clean=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.actorInput) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "7be10268-7b3d-541a-bc04-a93126db5db6",
+      "name": "2. Run UnitBytes (taobao-tmall-scraper)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20516664-2e41-5351-81b5-47c6b791a653",
+              "name": "itemId",
+              "value": "={{ $json.itemId }}",
+              "type": "string"
+            },
+            {
+              "id": "33b55cf2-ab68-55d1-9bd9-8b5a65001187",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "edd94c31-659d-5964-8e39-3db22dc87e33",
+              "name": "platform",
+              "value": "={{ $json.platform }}",
+              "type": "string"
+            },
+            {
+              "id": "2928faac-19d4-575b-9a76-bf6ac4f462bb",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "b9455d88-6e1d-52df-b0a2-2da7ea274d0e",
+              "name": "taobaoUrl",
+              "value": "={{ $json.taobaoUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "40c24c73-7617-52e2-8df6-bddb411782d2",
+              "name": "price",
+              "value": "={{ $json.price }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "056aca49-0a27-541d-a52c-d19fefa3ff70",
+      "name": "3. Normalize Output Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        940,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "taobao-tmall-scraper-dataset-export.csv"
+        }
+      },
+      "id": "f28db10d-f4f9-5d51-be12-565687005e67",
+      "name": "4. Export to CSV File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "1. Set Apify Token & Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Set Apify Token & Input": {
+      "main": [
+        [
+          {
+            "node": "2. Run UnitBytes (taobao-tmall-scraper)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Run UnitBytes (taobao-tmall-scraper)": {
+      "main": [
+        [
+          {
+            "node": "3. Normalize Output Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Normalize Output Fields": {
+      "main": [
+        [
+          {
+            "node": "4. Export to CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "030f9420-0ca8-5240-8fe8-208e287a8b19"
+  },
+  "tags": [
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Apify"
+    },
+    {
+      "name": "UnitBytes"
+    },
+    {
+      "name": "APAC E-Commerce & Social"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "name": "Alibaba Scraper: Wholesale Products & Factory Finder — Automated Extraction to CSV & Sheets (UnitBytes)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ Alibaba Scraper: Wholesale Products & Factory Finder — Automated n8n Pipeline\n**Powered by [UnitBytes on Apify](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=n8n_io)** ($0.005 / item)\n\n### ⚙️ How It Works\nThis workflow runs on a schedule, calls the **[alibaba-scraper Apify Actor](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=n8n_io)** via its synchronous REST endpoint, normalizes the extracted fields (`id, offerId, productId, title, url`), and exports a clean CSV file.\n\n### 🚀 30-Second Setup Instructions\n1. **Get your free Apify API Token**: Open [alibaba-scraper on Apify Store](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=n8n_io) and copy your API token from **Settings → Integrations**.\n2. **Paste your token & search parameters**: Double-click the **\"1. Set Apify Token & Input\"** node and replace `YOUR_APIFY_API_TOKEN` with your token.\n3. **Click \"Test Workflow\"**: The HTTP Request node calls the synchronous UnitBytes Apify endpoint, normalizes the extracted records, and exports a clean CSV file ready for Google Sheets, Airtable, Slack, or OpenAI.\n\n📖 **Documentation & Schema Reference**: [https://unitbytes.com/actors/alibaba-scraper/](https://unitbytes.com/actors/alibaba-scraper/)",
+        "height": 380,
+        "width": 520,
+        "color": 4
+      },
+      "id": "0ff9b98d-e198-5bf5-bda9-d20005080506",
+      "name": "Sticky Note — Setup Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### 📊 Connect Your Destination\nThe **\"3. Normalize Output Fields\"** node outputs flat records (`id, offerId, productId, title, url`).\n\n- **Google Sheets / Airtable**: Connect a Google Sheets (`Append or Update Row`) node after Step 3.\n- **Slack / Telegram / Email Alerts**: Connect a Filter node + Slack node to alert your team on new deals or reviews.\n- **AI Agent / OpenAI**: Connect an OpenAI / LLM Chain node to summarize or classify extracted items.",
+        "height": 220,
+        "width": 420,
+        "color": 5
+      },
+      "id": "582a2225-acfd-55f9-9f1d-0de3aee9d035",
+      "name": "Sticky Note — Destinations",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "eea29803-ca1c-5383-924d-a21dc8cad3a6",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "23a58ebd-b9be-57ad-afa3-7437cadcc2c3",
+              "name": "apifyToken",
+              "value": "YOUR_APIFY_API_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "cd25612d-1cca-5cb1-ae28-6c7b5fb8fcb7",
+              "name": "actorInput",
+              "value": "{\"keyword\": \"wireless earbuds\", \"proxyConfiguration\": {\"useApifyProxy\": true}}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cece4b15-2212-5a33-924a-30665a1f8016",
+      "name": "1. Set Apify Token & Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/unitbytes~alibaba-scraper/run-sync-get-dataset-items?token={{ $json.apifyToken }}&format=json&clean=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.actorInput) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "c7197c19-9057-5aef-999e-d1b6d3a2ade9",
+      "name": "2. Run UnitBytes (alibaba-scraper)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d0fea11a-1765-5ab4-988c-bb87a4a1a52f",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "0dafa58a-b81b-5220-a77d-3cf1df7bf04e",
+              "name": "offerId",
+              "value": "={{ $json.offerId }}",
+              "type": "string"
+            },
+            {
+              "id": "3284a2a6-c417-5361-aeda-3403f0edbbb7",
+              "name": "productId",
+              "value": "={{ $json.productId }}",
+              "type": "string"
+            },
+            {
+              "id": "3849ddf0-5208-5fd1-a616-85a696520cd0",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "89b39a83-6fe8-54a8-b353-9a6626f85828",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "dabc2230-0722-571d-a23b-a2969cfead09",
+              "name": "productUrl",
+              "value": "={{ $json.productUrl }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "ff46609a-f41e-5f68-b5aa-52b80fd7acc5",
+      "name": "3. Normalize Output Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        940,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "alibaba-scraper-dataset-export.csv"
+        }
+      },
+      "id": "e78220a2-e0cf-5156-a752-efa9432daa1c",
+      "name": "4. Export to CSV File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "1. Set Apify Token & Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Set Apify Token & Input": {
+      "main": [
+        [
+          {
+            "node": "2. Run UnitBytes (alibaba-scraper)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Run UnitBytes (alibaba-scraper)": {
+      "main": [
+        [
+          {
+            "node": "3. Normalize Output Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Normalize Output Fields": {
+      "main": [
+        [
+          {
+            "node": "4. Export to CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "030f9420-0ca8-5240-8fe8-208e287a8b19"
+  },
+  "tags": [
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Apify"
+    },
+    {
+      "name": "UnitBytes"
+    },
+    {
+      "name": "B2B Wholesale & Supply Chain"
+    }
+  ]
+}

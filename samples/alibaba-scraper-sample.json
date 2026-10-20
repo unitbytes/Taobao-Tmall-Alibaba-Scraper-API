@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1601918386232",
+    "offerId": "1601918386232",
+    "productId": "1601918386232",
+    "title": "Premium Crystal Clear TPU PC Case for iPhone 17 18 Pro Max Strong Magnetic Charging Shockproof Transparent Phone Cover",
+    "url": "https://www.alibaba.com/product-detail/Premium-Crystal-Clear-TPU-PC-Case_1601918386232.html",
+    "productUrl": "https://www.alibaba.com/product-detail/Premium-Crystal-Clear-TPU-PC-Case_1601918386232.html",
+    "price": 0.68,
+    "priceMin": 0.7251,
+    "priceMax": 0.9667,
+    "currency": "USD",
+    "minOrderQuantity": "Min. order: 200 pieces",
+    "soldOrder": "300 sold",
+    "tieredPrices": [
+      {
+        "minQuantity": 200,
+        "maxQuantity": 2999,
+        "price": 0.68,
+        "unit": "piece"
+      },
+      {
+        "minQuantity": 3000,
+        "maxQuantity": 29999,
+        "price": 0.65,
+        "unit": "piece"
+      },
+      {
+        "minQuantity": 30000,
+        "maxQuantity": null,
+        "price": 0.51,
+        "unit": "piece"
+      }
+    ],
+    "supplier": {
+      "name": "Guangzhou Ruite Electronic Technology Co., Ltd.",
+      "country": "CN",
+      "yearsActive": "9 yrs",
+      "isVerified": true,
+      "tradeAssurance": true,
+      "rating": 4.7,
+      "reviewCount": 99,
+      "storeUrl": "https://ruitetec.en.alibaba.com/company_profile.html"
+    },
+    "mainImage": "https://sc04.alicdn.com/kf/He0c23016d3854f688506c3d7090724e8a.png",
+    "pictureUrl": "https://sc04.alicdn.com/kf/He0c23016d3854f688506c3d7090724e8a.png",
+    "images": [
+      "https://sc04.alicdn.com/kf/He0c23016d3854f688506c3d7090724e8a.png",
+      "https://sc04.alicdn.com/kf/H0905779a61dc41c7a3122237ebd3af61u.jpg"
+    ],
+    "leadTime": {
+      "ladderPeriodList": [
+        {
+          "minQuantity": 1,
+          "maxQuantity": 100,
+          "processPeriod": 8
+        },
+        {
+          "minQuantity": 101,
+          "maxQuantity": 1000,
+          "processPeriod": 12
+        },
+        {
+          "minQuantity": 1001,
+          "maxQuantity": 5000,
+          "processPeriod": 16
+        }
+      ]
+    },
+    "specifications": {
+      "compatible brand": "For iPhone, For Samsung",
+      "design style": "Transparent",
+      "material": "TPU+PC",
+      "feature": "360 protection, Anti-Fingerprint, Magnetic, Shockproof",
+      "OEM/ODM": "Warmly Welcomed"
+    },
+    "detailLevel": "full",
+    "page": 1,
+    "position": 1,
+    "nextPage": 2,
+    "resumptionToken": "gAAAAABqs8yqOTyY..."
+  }
+]
