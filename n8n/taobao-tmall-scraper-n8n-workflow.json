@@ -66,7 +66,7 @@
             {
               "id": "55b04891-6bfc-5407-bf84-3783226851c5",
               "name": "actorInput",
-              "value": "{\"maxItems\": 20}",
+              "value": "{\"queries\": [\"phone case\"], \"maxItems\": 30, \"startPage\": 1}",
               "type": "object"
             }
           ]

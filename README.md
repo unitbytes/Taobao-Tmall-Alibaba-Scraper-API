@@ -9,7 +9,7 @@
 
 **The fastest, cheapest zero-login Taobao (淘宝), Tmall (天猫) & Alibaba.com B2B Wholesale Scraper API suite on Apify ($1.50 / 1,000 items). Dual-Catalog Engine (taobao_retail + mainland_wholesale) extracting 50+ full product detail fields, real customer reviews (with buyer videos), 3-axis Seller DSR ratings, SKU matrices, multi-currency prices (CNY, SGD, HKD, TWD), wholesale tier discounts, and permanent HD photos.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 22 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 23 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -42,7 +42,7 @@ This repository contains ready-to-run **Python SDK scripts**, **1-click n8n auto
 | **Alibaba Scraper: Wholesale Products & Factory Finder**<br><sub>[`unitbytes/alibaba-scraper`](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) • [Full Schema](https://unitbytes.com/actors/alibaba-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/how-to-scrape-1688-without-account-sourcing-guide/)</sub> | [`examples/run_alibaba_scraper.py`](examples/run_alibaba_scraper.py) | [`n8n/alibaba-scraper-n8n-workflow.json`](n8n/alibaba-scraper-n8n-workflow.json) | [`JSON`](samples/alibaba-scraper-sample.json) · [`CSV`](samples/alibaba-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) |
 
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
-- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 22 pre-built scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
+- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 23 pre-built scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbook:** Read **[Taobao & Tmall API Pricing in 2026 ($1.50/1K vs. $99/mo RapidAPI & Open.Taobao Limits)](https://unitbytes.com/blog/how-to-scrape-taobao-tmall-products-prices-reviews-guide/)** or browse all scraping & automation guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
 <!-- UNITBYTES_REPO_KIT_END -->
 
@@ -261,7 +261,7 @@ With Apify's default $5.00 free monthly credit, you can extract over 3,330 produ
 
 ### 🚀 Alibaba Scraper: Wholesale Products & Factory Finder (`unitbytes/alibaba-scraper`)
 
-The ultimate supplier intelligence engine for Alibaba.com. Extract global manufacturer product catalogs, FOB tiered pricing brackets, verified factory audit certifications, and Trade Assurance status.
+Fastest Alibaba scraper for Amazon FBA, dropshipping & B2B sourcing. Extract wholesale products, tiered volume pricing, MOQ, verified factory audits & lead times.
 
 - **Pricing:** `$0.005 / item` (Pay-Per-Event — $0.005 search product listing, $0.01 full b2b product detail & supplier audit (volume tiers from $0.0009))
 - **Cloud Console:** [https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba](https://apify.com/unitbytes/alibaba-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba)
@@ -422,6 +422,6 @@ Don't want to manage API tokens or scripts? **UnitBytes Data Delivery** provides
 
 - 🌐 **Request a Sample Dataset:** [https://unitbytes.com/#enterprise-intake](https://unitbytes.com/#enterprise-intake)
 - 📧 **Direct Engineering Contact:** [contact@unitbytes.com](mailto:contact@unitbytes.com)
-- ⚡ **Explore All 22 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
+- ⚡ **Explore All 23 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
 - 📚 **Engineering Playbooks & Guides:** [https://unitbytes.com/blog/](https://unitbytes.com/blog/)
 - 🔗 **Official n8n Creator Profile:** [https://n8n.io/creators/unitbytes/](https://n8n.io/creators/unitbytes/)
