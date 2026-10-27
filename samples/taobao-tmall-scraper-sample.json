@@ -1,0 +1,88 @@
+[
+  {
+    "itemId": "100000000001",
+    "title": "[殼膜套裝]磁吸支點手機保護殼適用iPhone Pro防摔全包保護套",
+    "platform": "tmall",
+    "catalogSource": "taobao_retail",
+    "url": "https://world.taobao.com/item/100000000001.htm",
+    "taobaoUrl": "https://detail.tmall.com/item.htm?id=100000000001",
+    "price": 876.0,
+    "originalPrice": 876.0,
+    "promotionPrice": 876.0,
+    "currency": "CNY",
+    "priceHkd": 1040.07,
+    "priceTwd": 4320.17,
+    "discountType": "新品促銷",
+    "reviewCount": 58,
+    "ratingGoodCount": "58",
+    "shopId": "100000001",
+    "sellerUserId": "1600000001",
+    "shopName": "數碼配件官方旗艦店",
+    "sellerNick": "數碼配件官方旗艦店",
+    "sellerType": "B",
+    "sellerTypeLabel": "Tmall Flagship Store",
+    "sellerCreditLevel": 19,
+    "shopOpenedAt": "2018-04-24 14:44:53",
+    "shopItemCount": 349,
+    "shopNewItemCount": 26,
+    "shopUrl": "https://world.taobao.com/dianpu/100000001.htm",
+    "taobaoShopUrl": "https://shop100000001.taobao.com",
+    "shopIcon": "https://img.alicdn.com/imgextra/i2/1600000001/O1CN01exampleShopIcon_!!1600000001.jpg",
+    "dsrDescription": 4.84,
+    "dsrService": 4.8,
+    "dsrDelivery": 4.9,
+    "reviewTags": [
+      {
+        "tag": "質感很強",
+        "count": 6
+      },
+      {
+        "tag": "手感很好",
+        "count": 5
+      },
+      {
+        "tag": "支架很實用",
+        "count": 5
+      },
+      {
+        "tag": "圖案設計精緻",
+        "count": 4
+      }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "content": "素皮紋理很漂亮，上手質感很好，磁吸支架開合順滑，邊緣包邊處理得很平整。",
+        "date": "2026.10.14 18:16",
+        "sku": "適用型號:Pro Max;顏色分類:利落白",
+        "user": "***",
+        "videos": []
+      }
+    ],
+    "categoryId": "150704",
+    "rootCategoryId": "50008090",
+    "categoryPath": "首頁 > 數碼商城 > 手機及配件 > 手機配件 > 保護套/矽膠套",
+    "location": "廣東深圳",
+    "freeShipping": false,
+    "mainImage": "https://img.alicdn.com/imgextra/i3/1600000001/O1CN01exampleMainPic_!!1600000001-2-item_pic.png",
+    "images": [
+      "https://img.alicdn.com/imgextra/i3/1600000001/O1CN01exampleMainPic_!!1600000001-2-item_pic.png"
+    ],
+    "skuCount": 1,
+    "skus": [
+      {
+        "skuId": "sku_1",
+        "name": "適用型號:Pro Max;顏色分類:利落白",
+        "price": 876.0,
+        "imageUrl": "https://img.alicdn.com/imgextra/i3/1600000001/O1CN01exampleMainPic_!!1600000001-2-item_pic.png"
+      }
+    ],
+    "attributes": {
+      "適用型號": "Pro Max",
+      "顏色分類": "利落白"
+    },
+    "scrapedAt": "2026-10-25T12:53:32+00:00",
+    "searchQuery": "phone case",
+    "detailLevel": "full"
+  }
+]

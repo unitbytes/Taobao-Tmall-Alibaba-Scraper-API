@@ -1,0 +1,99 @@
+[
+  {
+    "id": "1600000000001",
+    "offerId": "1600000000001",
+    "productId": "1600000000001",
+    "title": "Premium Crystal Clear TPU PC Case for iPhone 17 18 Pro Max Strong Magnetic Charging Shockproof Transparent Phone Cover",
+    "url": "https://www.alibaba.com/product-detail/Premium-Crystal-Clear-TPU-PC-Case_1600000000001.html",
+    "productUrl": "https://www.alibaba.com/product-detail/Premium-Crystal-Clear-TPU-PC-Case_1600000000001.html",
+    "price": 0.68,
+    "priceMin": 0.51,
+    "priceMax": 0.68,
+    "currency": "USD",
+    "minOrderQuantity": "Min. order: 200 pieces",
+    "unitWeightKg": 0.08,
+    "packageSizeCm": "22X12X2 cm",
+    "priceType": "ladder",
+    "skuCount": 42,
+    "certifications": [
+      "CE",
+      "RoHS"
+    ],
+    "supplierId": "230000001",
+    "supplierName": "Shenzhen Horizon Electronics Co., Ltd.",
+    "supplierCountry": "CN",
+    "supplierYears": "9 yrs",
+    "isVerifiedSupplier": true,
+    "tradeAssurance": true,
+    "supplierRating": 4.7,
+    "supplierReviewCount": 99,
+    "supplierResponseTime": "≤2h",
+    "supplierOnTimeDeliveryRate": "100.0%",
+    "supplierUrl": "https://example-supplier.en.alibaba.com/company_profile.html",
+    "tieredPrices": [
+      {
+        "minQuantity": 200,
+        "maxQuantity": 2999,
+        "price": 0.68,
+        "unit": "piece"
+      },
+      {
+        "minQuantity": 3000,
+        "maxQuantity": 29999,
+        "price": 0.65,
+        "unit": "piece"
+      },
+      {
+        "minQuantity": 30000,
+        "maxQuantity": null,
+        "price": 0.51,
+        "unit": "piece"
+      }
+    ],
+    "skuVariants": [
+      {
+        "skuId": "10001",
+        "attributes": {
+          "Color": "Clear",
+          "Applicable Models": "iPhone 17 Pro Max"
+        },
+        "price": 0.68,
+        "image": "https://sc04.alicdn.com/kf/He0c23016d3854f688506c3d7090724e8a.png"
+      }
+    ],
+    "supplier": {
+      "id": "230000001",
+      "name": "Shenzhen Horizon Electronics Co., Ltd.",
+      "country": "CN",
+      "yearsActive": "9 yrs",
+      "isVerified": true,
+      "tradeAssurance": true,
+      "rating": 4.7,
+      "reviewCount": 99,
+      "responseTime": "≤2h",
+      "onTimeDeliveryRate": "100.0%",
+      "storeUrl": "https://example-supplier.en.alibaba.com/company_profile.html",
+      "homeUrl": "https://example-supplier.en.alibaba.com/"
+    },
+    "leadTime": {
+      "ladderPeriodList": [
+        {
+          "minQuantity": 1,
+          "maxQuantity": 100,
+          "processPeriod": 8
+        },
+        {
+          "minQuantity": 101,
+          "maxQuantity": 1000,
+          "processPeriod": 12
+        }
+      ]
+    },
+    "specifications": {
+      "compatible brand": "For iPhone, For Samsung",
+      "material": "TPU+PC",
+      "OEM/ODM": "Warmly Welcomed"
+    },
+    "detailLevel": "full"
+  }
+]
