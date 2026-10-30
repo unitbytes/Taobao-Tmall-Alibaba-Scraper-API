@@ -12,7 +12,7 @@
 
 **The fastest, cheapest zero-login Taobao (淘宝), Tmall (天猫) & Alibaba.com B2B Wholesale Scraper & Synchronous REST API suite (`$1.50 / 1,000 items`). Extract official Mainland Taobao & Tmall products, seller shop catalogs (`shopUrls`), 50+ full detail fields, customer reviews (with buyer videos), 3-axis Seller DSR ratings, purchased SKU attributes, multi-currency prices (CNY, SGD, HKD, TWD), Alibaba B2B wholesale tiers, and permanent HD photos.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Taobao-Tmall-Alibaba-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ RapidAPI Hub**](https://rapidapi.com/unitbytes/api/alibaba-b2b-wholesale-and-supplier-data) • [**⚡ Zyla API Hub**](https://zylalabs.com/api-marketplace/commerce+%26+ecommerce/global+b2b+wholesale+and+supplier+data+api/14474) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 39 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/taobao-tmall-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Taobao-Tmall-Alibaba-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ RapidAPI Hub**](https://rapidapi.com/unitbytes/api/alibaba-b2b-wholesale-and-supplier-data) • [**⚡ Zyla API Hub**](https://zylalabs.com/api-marketplace/commerce+%26+ecommerce/global+b2b+wholesale+and+supplier+data+api/14474) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 41 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -48,7 +48,7 @@ This repository contains ready-to-run **Python SDK scripts**, an **interactive 1
 
 - 📓 **1-Click Interactive Google Colab Notebook:** Open [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) directly in your browser via [**Google Colab ↗**](https://colab.research.google.com/github/unitbytes/Taobao-Tmall-Alibaba-Scraper-API/blob/main/notebooks/quickstart.ipynb) to inspect sample DataFrames and test live API queries with zero local setup.
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
-- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 39 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
+- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 41 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbooks:** [**Taobao & Tmall API Pricing Guide**](https://unitbytes.com/blog/how-to-scrape-taobao-tmall-products-prices-reviews-guide/) • [**B2B Sourcing & Supplier API Playbook**](https://unitbytes.com/blog/1688-image-search-alibaba-b2b-supplier-api-sourcing-guide/) — or browse all guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
 <!-- UNITBYTES_REPO_KIT_END -->
 
@@ -94,8 +94,8 @@ The fastest, cheapest, and most reliable cookieless Taobao (淘宝) & Tmall (天
 | Parameter | Type | Default / Prefill | Description |
 | :--- | :---: | :--- | :--- |
 | `queries` | `array` | `["phone case"]` | List of product keywords to search on Taobao and Tmall (e.g., ['手机壳', '蓝牙耳机', '女装', 'phone case', 'wireless earbuds']). Chinese keywords provide the deepest catalog coverage; common English product terms are also supported and automatically resolved to Chinese tags when needed. |
-| `itemUrls` | `array` | — | Scrape specific products directly. Supports Taobao, Tmall, and World Taobao URLs (e.g. https://item.taobao.com/item.htm?id=1010692564493, https://detail.tmall.com/item.htm?id=100000000001, https://world.taobao.com/item/1010692564493.htm) or raw numeric item IDs. |
-| `shopUrls` | `array` | — | Scrape a seller's storefront product catalog and 3-axis DSR ratings. Accepts Taobao/Tmall shop URLs (e.g. https://world.taobao.com/dianpu/100000002.htm, https://shop100000002.taobao.com), numeric shop IDs ('100000002'), seller handles ('inman'), or any product URL to automatically. |
+| `itemUrls` | `array` | — | Scrape specific products directly. Supports Taobao, Tmall, and World Taobao URLs (e.g. https://item.taobao.com/item.htm?id=1010692564493, https://detail.tmall.com/item.htm?id=1085260672042, https://world.taobao.com/item/1010692564493.htm) or raw numeric item IDs. |
+| `shopUrls` | `array` | — | Scrape a seller's storefront product catalog and 3-axis DSR ratings. Accepts Taobao/Tmall shop URLs (e.g. https://world.taobao.com/dianpu/63978904.htm, https://shop63978904.taobao.com), numeric shop IDs ('63978904'), seller handles ('inman'), or any product URL to automatically. |
 | `startUrls` | `array` | — | Paste Taobao, Tmall, or World Taobao URLs directly from your browser (search listings, shop storefronts like world.taobao.com/dianpu/... or shopXXXX.taobao.com, world.taobao.com/product/... keyword pages, or direct product item URLs). |
 | `scrapeDetails` | `boolean` | `True` | When enabled (default), enriches every discovered product with public detail-page fields (3-axis seller DSR scores, HKD/TWD cross-border prices, featured customer review & purchased SKU attributes, buyer video proofs, sentiment tags, 5-image HD gallery, shipping location, and. |
 | `maxItems` | `integer` | `30` | Maximum number of products to scrape (1 to 10,000). |
@@ -273,7 +273,7 @@ With Apify's default `$5.00` free monthly credit, you can extract 3,330+ Summary
   </a>
 </p>
 
-Fastest cookieless Taobao (淘宝) & Tmall (天猫) Seller Catalog & Shop Inventory Scraper (from `$0.0015/item` — 4x cheaper). Extract any seller's listed products, 3-axis DSR scores, customer reviews, CNY/HKD/TWD prices & HD photos by shop URL, ID, or handle.
+Fastest cookieless Taobao (淘宝) & Tmall (天猫) Seller Catalog & Shop Inventory Scraper (from `$0.0015/item` — 4x cheaper). Extract any seller's listed products, 3-axis DSR scores, customer reviews, CNY/HKD/TWD prices & HD photos by shop URL, ID, handle, or product.
 
 - **Pricing:** `$0.0015 / item` (Pay-Per-Event — `$0.0015` seller catalog product scraped, `$0.004` full product detail & sku matrix (volume tiers from `$0.00105`))
 - **Cloud Console:** [https://apify.com/unitbytes/taobao-seller-shop-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba](https://apify.com/unitbytes/taobao-seller-shop-scraper?fpr=939u3w&fp_sid=gh_taobao_alibaba)
@@ -291,8 +291,8 @@ Fastest cookieless Taobao (淘宝) & Tmall (天猫) Seller Catalog & Shop Invent
 
 | Parameter | Type | Default / Prefill | Description |
 | :--- | :---: | :--- | :--- |
-| `shopUrls` | `array` | `["https://world.taobao.com/dianpu/100000002.htm"` | Enter one or more Taobao or Tmall sellers to extract their product inventory and 3-axis DSR ratings. Accepts: • Shop URLs: https://world.taobao.com/dianpu/100000002.htm or https://shop100000002.taobao.com • Numeric Shop IDs: '100000002' • Seller handles or brand subdomains. |
-| `sellers` | `array` | — | Optional list of seller handles, brand names, or numeric shop IDs (e.g. ['inman', '精選百貨官方店', '34033352']). |
+| `shopUrls` | `array` | `["https://world.taobao.com/dianpu/63978904.htm"]` | Enter one or more Taobao or Tmall sellers to extract their product inventory and 3-axis DSR ratings. Accepts: • Shop URLs: https://world.taobao.com/dianpu/63978904.htm or https://shop63978904.taobao.com • Numeric Shop IDs: '63978904' • Seller handles or brand subdomains. |
+| `sellers` | `array` | — | Optional list of seller handles, brand names, or numeric shop IDs (e.g. ['inman', '優送網', '34033352']). |
 | `startUrls` | `array` | — | Paste Taobao, Tmall, or World Taobao shop links or product URLs directly from your browser. |
 | `scrapeDetails` | `boolean` | `True` | When enabled (default), enriches every seller product with public detail-page fields (customer reviews, purchased SKU attributes, buyer video proofs, 5-image HD gallery, shipping location, and category breadcrumbs). |
 | `maxItems` | `integer` | `30` | Maximum total number of seller products to scrape across the run (1 to 10,000). |
@@ -314,7 +314,7 @@ if not APIFY_TOKEN or APIFY_TOKEN.startswith("YOUR_"):
 client = ApifyClient(APIFY_TOKEN)
 
 run_input = {
-    "shopUrls": ["https://world.taobao.com/dianpu/100000002.htm"],
+    "shopUrls": ["https://world.taobao.com/dianpu/63978904.htm"],
     "maxItems": 30,
     "startPage": 1,
     "scrapeDetails": True,
@@ -409,10 +409,10 @@ Fastest Alibaba scraper for Amazon FBA, dropshipping & B2B sourcing. Extract who
 | `mode` | `string` | `products` | Choose what to scrape: 'products' (Wholesale Products, Tiered Prices, FBA Weight/Size & SKUs), 'suppliers' (1 Row = 1 Unique Verified Manufacturer & Factory Audit), or 'inventory' (Full Supplier Store Catalog & Ready-to-Ship Pagination). |
 | `keyword` | `string` | `wireless earbuds` | Product or supplier keyword to search on Alibaba.com (e.g. 'wireless earbuds'). Use this for quick single-keyword searches or 'Search Queries' for batch searches. |
 | `queries` | `array` | — | List of product or supplier keywords to search on Alibaba.com (e.g., 'wireless earbuds', 'phone case'). Multiple queries are scraped in a single run. |
-| `categoryUrl` | `string` | — | Direct Alibaba.com category URL, search URL, or supplier catalog URL (e.g., 'https://www.alibaba.com/category/sports-clothes_201275271.html' or 'https://example-supplier.en.alibaba.com/productlist-1.html'). Prioritized when specified. |
+| `categoryUrl` | `string` | — | Direct Alibaba.com category URL, search URL, or supplier catalog URL (e.g., 'https://www.alibaba.com/category/sports-clothes_201275271.html' or 'https://ruitetec.en.alibaba.com/productlist-1.html'). Prioritized when specified. |
 | `productUrls` | `array` | — | List of direct Alibaba.com product URLs to scrape directly (e.g., 'https://www.alibaba.com/product-detail/Wholesale-Earbuds_1600123456789.html'). |
-| `supplierUrls` | `array` | — | List of direct Alibaba supplier URLs to audit directly (e.g., 'https://example-supplier.en.alibaba.com/company_profile.html' or 'https://example-supplier.en.alibaba.com/'). |
-| `storeUrls` | `array` | — | List of Alibaba seller store URLs or subdomains to paginate their full product catalog (e.g., 'https://example-supplier.en.alibaba.com/productlist-1.html' or 'https://example-supplier.en.alibaba.com/'). |
+| `supplierUrls` | `array` | — | List of direct Alibaba supplier URLs to audit directly (e.g., 'https://ruitetec.en.alibaba.com/company_profile.html' or 'https://ruitetec.en.alibaba.com/'). |
+| `storeUrls` | `array` | — | List of Alibaba seller store URLs or subdomains to paginate their full product catalog (e.g., 'https://ruitetec.en.alibaba.com/productlist-1.html' or 'https://ruitetec.en.alibaba.com/'). |
 | `inventoryFilter` | `string` | `all` | Filter products when scraping a seller's store catalog: 'all' (Full Catalog), 'rts' (Ready-to-Ship / In-Stock Only), 'ctz' (Customizable / OEM Only), or 'dropshipping' (Dropshipping Catalog). |
 | `maxItems` | `integer` | `20` | Maximum wholesale products to extract. Default 20 items in Full mode costs only ~`$0.05` (100% free under Apify's `$5` monthly credit). |
 | `detailLevel` | `string` | `full` | 'full' fetches complete B2B wholesale pricing tiers, MOQ, FBA package weight & dimensions, SKU variants, supplier audits (TÜV/SGS), lead times, and specifications (`$2.50/1k`). 'summary' extracts product search cards (`$1.50/1k`). |
@@ -614,6 +614,6 @@ Don't want to manage API tokens or scripts? **UnitBytes Data Delivery** provides
 
 - 🌐 **Request a Sample Dataset:** [https://unitbytes.com/#enterprise-intake](https://unitbytes.com/#enterprise-intake)
 - 📧 **Direct Engineering Contact:** [contact@unitbytes.com](mailto:contact@unitbytes.com)
-- ⚡ **Explore All 39 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
+- ⚡ **Explore All 41 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
 - 📚 **Engineering Playbooks & Guides:** [https://unitbytes.com/blog/](https://unitbytes.com/blog/)
 - 🔗 **Official n8n Creator Profile:** [https://n8n.io/creators/unitbytes/](https://n8n.io/creators/unitbytes/)

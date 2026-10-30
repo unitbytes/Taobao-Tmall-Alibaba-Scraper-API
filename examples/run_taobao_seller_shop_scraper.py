@@ -21,7 +21,7 @@ if not APIFY_TOKEN or APIFY_TOKEN.startswith("YOUR_"):
 client = ApifyClient(APIFY_TOKEN)
 
 run_input = {
-    "shopUrls": ["https://world.taobao.com/dianpu/100000002.htm"],
+    "shopUrls": ["https://world.taobao.com/dianpu/63978904.htm"],
     "maxItems": 30,
     "startPage": 1,
     "scrapeDetails": True,
