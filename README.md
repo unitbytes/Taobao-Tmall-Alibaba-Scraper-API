@@ -95,7 +95,7 @@ The fastest, cheapest, and most reliable cookieless Taobao (淘宝) & Tmall (天
 | :--- | :---: | :--- | :--- |
 | `queries` | `array` | `["phone case"]` | List of product keywords to search on Taobao and Tmall (e.g., ['手机壳', '蓝牙耳机', '女装', 'phone case', 'wireless earbuds']). Chinese keywords provide the deepest catalog coverage; common English product terms are also supported and automatically resolved to Chinese tags when needed. |
 | `itemUrls` | `array` | — | Scrape specific products directly. Supports Taobao, Tmall, and World Taobao URLs (e.g. https://item.taobao.com/item.htm?id=1010692564493, https://detail.tmall.com/item.htm?id=1085260672042, https://world.taobao.com/item/1010692564493.htm) or raw numeric item IDs. |
-| `shopUrls` | `array` | — | Scrape a seller's storefront product catalog and 3-axis DSR ratings. Accepts Taobao/Tmall shop URLs (e.g. https://world.taobao.com/dianpu/63978904.htm, https://shop63978904.taobao.com), numeric shop IDs ('63978904'), seller handles ('inman'), or any product URL to automatically. |
+| `shopUrls` | `array` | — | Scrape a seller's storefront product catalog and 3-axis DSR ratings. Accepts Taobao/Tmall shop URLs (e.g. https://world.taobao.com/dianpu/100000002.htm, https://shop100000002.taobao.com), numeric shop IDs ('100000002'), seller handles ('inman'), or any product URL to automatically. |
 | `startUrls` | `array` | — | Paste Taobao, Tmall, or World Taobao URLs directly from your browser (search listings, shop storefronts like world.taobao.com/dianpu/... or shopXXXX.taobao.com, world.taobao.com/product/... keyword pages, or direct product item URLs). |
 | `scrapeDetails` | `boolean` | `True` | When enabled (default), enriches every discovered product with public detail-page fields (3-axis seller DSR scores, HKD/TWD cross-border prices, featured customer review & purchased SKU attributes, buyer video proofs, sentiment tags, 5-image HD gallery, shipping location, and. |
 | `maxItems` | `integer` | `30` | Maximum number of products to scrape (1 to 10,000). |
@@ -291,7 +291,7 @@ Fastest cookieless Taobao (淘宝) & Tmall (天猫) Seller Catalog & Shop Invent
 
 | Parameter | Type | Default / Prefill | Description |
 | :--- | :---: | :--- | :--- |
-| `shopUrls` | `array` | `["https://world.taobao.com/dianpu/63978904.htm"]` | Enter one or more Taobao or Tmall sellers to extract their product inventory and 3-axis DSR ratings. Accepts: • Shop URLs: https://world.taobao.com/dianpu/63978904.htm or https://shop63978904.taobao.com • Numeric Shop IDs: '63978904' • Seller handles or brand subdomains. |
+| `shopUrls` | `array` | `["https://world.taobao.com/dianpu/100000002.htm"` | Enter one or more Taobao or Tmall sellers to extract their product inventory and 3-axis DSR ratings. Accepts: • Shop URLs: https://world.taobao.com/dianpu/100000002.htm or https://shop100000002.taobao.com • Numeric Shop IDs: '100000002' • Seller handles or brand subdomains. |
 | `sellers` | `array` | — | Optional list of seller handles, brand names, or numeric shop IDs (e.g. ['inman', '優送網', '34033352']). |
 | `startUrls` | `array` | — | Paste Taobao, Tmall, or World Taobao shop links or product URLs directly from your browser. |
 | `scrapeDetails` | `boolean` | `True` | When enabled (default), enriches every seller product with public detail-page fields (customer reviews, purchased SKU attributes, buyer video proofs, 5-image HD gallery, shipping location, and category breadcrumbs). |
@@ -314,7 +314,7 @@ if not APIFY_TOKEN or APIFY_TOKEN.startswith("YOUR_"):
 client = ApifyClient(APIFY_TOKEN)
 
 run_input = {
-    "shopUrls": ["https://world.taobao.com/dianpu/63978904.htm"],
+    "shopUrls": ["https://world.taobao.com/dianpu/100000002.htm"],
     "maxItems": 30,
     "startPage": 1,
     "scrapeDetails": True,
